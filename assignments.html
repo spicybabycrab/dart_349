@@ -1,0 +1,118 @@
+<html>
+   <head>
+    <meta charset="UTF-8">
+    <title> assignments </title>
+    <link rel="stylesheet" href="css/assignments.css">
+    <script type="text/javascript">
+       var rev = "fwd"; function titlebar(val)
+{ 
+var msg = "";
+var res = " ";
+var speed = 125;
+var pos = val;
+msg = "🔥 🔥 ASSIGNMENTS 🔥 🔥";
+var le = msg.length;
+if(rev == "fwd"){
+if(pos < le){
+pos = pos+1;
+scroll = msg.substr(0,pos);
+document.title = scroll;
+timer = window.setTimeout("titlebar("+pos+")",speed);}
+else{
+rev = "bwd";
+timer = window.setTimeout("titlebar("+pos+")",speed);}}
+else{
+if(pos > 0){
+pos = pos-1;
+var ale = le-pos;
+scrol = msg.substr(ale,le);
+document.title = scrol;
+timer = window.setTimeout("titlebar("+pos+")",speed);}
+else{
+rev = "fwd";
+timer = window.setTimeout("titlebar("+pos+")",speed);
+}}}
+titlebar(0);
+  </script>
+</head>
+
+<header id="face"> 
+           <h3><a href="index.html">home</a></h3>
+           <h4><a href="projects.html">projects</a></h4>
+           <h5><a href="about.html">about</a></h5>
+           <h6><a href="assignments.html">assignments</a></h6>
+</header>
+
+<div class="container">
+ 
+  <div class="week1">
+    <a href="assignments/week1/index.html">
+        <section class="week1">
+        <h1>1</h1>
+        <h2><i>Basic HTML</i></h2>
+        </section>
+    </a>
+  </div>
+  
+  <div class="week2">
+      <a href="assignments/week2/index.html">
+        <section class="week2">
+        <h1>2</h1>
+        <h2><i>Basic CSS</i></h2>
+        </section>
+    </a>
+  </div>
+  
+  <div class="week3">
+     <a href="assignments/week3/index.html">
+        <section class="week3">
+        <h1>3</h1>
+        <h2><i>IDs and Classes</i></h2>
+        </section>
+    </a>
+  </div>
+  
+  <div class="week4">
+    <a href="assignments/week4/index.html">
+        <section class="week4">
+        <h1>4</h1>
+        <h2><i>Flex Box</i></h2>
+        </section>
+    </a>
+  </div>
+  
+  <div class="week5">   
+    <a href="assignments/week5/index.html">
+        <section class="week5">
+        <h1>5</h1>
+        <h2><i>Video</i></h2>
+        </section>
+    </a></div>
+
+  <div class="week6">   
+    <a href="assignments/week6/index.html">
+        <section class="week6">
+        <h1>6</h1>
+        <h2><i>Animation</i></h2>
+        </section>
+    </a></div>
+    
+   <div class="week7">   
+    <a href="assignments/week7/index.html">
+        <section class="week7">
+        <h1>7</h1>
+        <h2><i>CSS Grid</i></h2>
+        </section>
+    </a></div>
+    
+   <div class="week8">   
+    <a href="assignments/week8/index.html">
+        <section class="week8">
+        <h1>8</h1>
+        <h2><i>Media Queries</i></h2>
+        </section>
+    </a></div>
+    
+</div>
+  
+</html>
