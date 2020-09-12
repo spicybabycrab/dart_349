@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Media Queries</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<body id = "body">
+
+<!-----FIND----->
+
+<section id="clickIntro">
+    <h1>Find and Click</h1>
+</section>
+
+<div id="buttonBarrier">
+
+<button id="clickButton"type="button" onClick="fuckOff()">society has become the biggest panopticon</button>
+</div>  
+
+<!-----FIND JS----->
+
+<script>
+//Make text disappear
+function fuckOff() {
+document.getElementById("clickIntro").style.display = "none";}
+</script>
+    
+<script>
+//this function will randomize phrases appearing on buttons
+let buttonWords = ["one country, two systems", "borrowed time in this borrowed city", "surveillance is here, and it’s here to stay", "we are watched and fundamentally changed. we perform rather than be", "a face is like being armed",
+"today, in our biometric age, existence has become a means of control", "becoming nonexistent turns your face into fog, and fog makes revolt possible", "masks act as an opaque tool of collective transformation", "think about data collection, facial recognition", "China is boasting that it has 600 million surveillance cameras with facial recognition capacities", "by 2020, the Chinese government aims to build a nationwide video surveillance network for ensuring public security which will be omnipresent, fully networked, working all the time, and fully controllable", "a revolution of our times"]
+
+let buttonVal;
+
+$(document).ready(function (){
+  console.log("sip");
+  $('#clickButton').on("click", hi);
+});
+
+function hi(){
+  console.log("hi");
+  chooseButtonText();
+}
+
+  function chooseButtonText() {
+    buttonVal = buttonWords[Math.floor(Math.random() * buttonWords.length)];
+    $("#clickButton").text(buttonVal);
+    console.log($("#clickButton").height());
+
+    positionButton();
+}
+
+  function positionButton(){
+   
+    buttonLeftMargin = Math.ceil(Math.random()*60);
+   buttonTopMargin = Math.ceil(Math.random()*60);
+      
+       $("#clickButton").css("margin-top", buttonTopMargin+"%");
+    $("#clickButton").css("margin-left", buttonLeftMargin+"%");
+}
+    
+</script>
+    
+</body>
+</html>
