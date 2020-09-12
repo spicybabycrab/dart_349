@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro|Work+Sans|ZCOOL+XiaoWei&display=swap');
+
+/* reset */
+* {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    /* border and padding won't increase width or height*/
+}
+
+html, body {
+	height: 100%;
+    cursor:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='50' height='60' viewport='0 0 100 100' style='fill:black;font-size:30px;'><text y='50%'>🌶️</text></svg>") 16 0,auto; 
+/* parent at 100% height makes children able to be 100%	height*/
+}
+
+section {
+    width: 100%;
+    height: 100vh;
+	padding: 2%;
+	position:relative;
+}
+
+/* unvisited link */
+a:link {
+  color: #fff;
+    font-family:'Source Sans Pro', sans-serif;
+    text-decoration: none; 
+    cursor:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='50' height='60' viewport='0 0 100 100' style='fill:black;font-size:30px;'><text y='50%'>🦀</text></svg>") 16 0,auto; 
+    transition:all 0.3s ease;
+}
+
+/* visited link */
+a:visited {
+  color: white;
+    font-family:'Source Sans Pro', sans-serif;
+    text-decoration: none;
+    cursor:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='50' height='60' viewport='0 0 100 100' style='fill:black;font-size:30px;'><text y='50%'>🦀</text></svg>") 16 0,auto; 
+    transition:all 0.3s ease;
+}
+
+/* mouse over link */
+a:hover {
+    font-family:'Source Sans Pro', sans-serif;
+    text-decoration: none;
+    color: transparent;
+    text-shadow: 0 0 6px white;
+    cursor:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='50' height='60' viewport='0 0 100 100' style='fill:black;font-size:30px;'><text y='50%'>🦀</text></svg>") 16 0,auto; 
+    transition:all 0.3s ease;
+}
+
+/* selected link */
+a:active {
+  color: yellow;
+    font-family:'Source Sans Pro', sans-serif;
+    text-decoration: none;
+    cursor:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='50' height='60' viewport='0 0 100 100' style='fill:black;font-size:30px;'><text y='50%'>🦀</text></svg>") 16 0,auto; 
+    transition:all 0.3s ease;
+}
+
+#face{
+    min-width:100%;
+    min-height:100vh;
+    height:auto; 
+    background:url(../images/face.jpg) no-repeat fixed
+        center center; 
+    background-size:cover; 
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    z-index: -1;
+}
+
+#face h1{  
+    font-family: 'ZCOOL XiaoWei', serif;
+    font-size: 40vmax;
+    color: #fff;
+    font-weight: 500;
+    text-align: center;
+    justify-content: center;
+}
+
+#face h3 {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 5vmax;
+}
+
+#face h4 {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 5vmax;
+}
+
+#face h5 {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  font-size: 5vmax;
+}
+
+#face h6 {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  font-size: 5vmax;
+}
