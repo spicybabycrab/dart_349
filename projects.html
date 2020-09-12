@@ -1,0 +1,64 @@
+<html>
+   
+   <head>
+    <meta charset="UTF-8">
+    <title>projects</title>
+    <link rel="stylesheet" href="css/projects.css">
+    <script type="text/javascript">
+       var rev = "fwd"; function titlebar(val)
+{ 
+var msg = "";
+var res = " ";
+var speed = 125;
+var pos = val;
+msg = "⚔️ ⚔️ PROJECTS ⚔️ ⚔️";
+var le = msg.length;
+if(rev == "fwd"){
+if(pos < le){
+pos = pos+1;
+scroll = msg.substr(0,pos);
+document.title = scroll;
+timer = window.setTimeout("titlebar("+pos+")",speed);}
+else{
+rev = "bwd";
+timer = window.setTimeout("titlebar("+pos+")",speed);}}
+else{
+if(pos > 0){
+pos = pos-1;
+var ale = le-pos;
+scrol = msg.substr(ale,le);
+document.title = scrol;
+timer = window.setTimeout("titlebar("+pos+")",speed);}
+else{
+rev = "fwd";
+timer = window.setTimeout("titlebar("+pos+")",speed);
+}}}
+titlebar(0);
+  </script>
+    </head>
+
+<body>
+      
+<header id="face"> 
+           <h3><a href="index.html">home</a></h3>
+           <h4><a href="projects.html">projects</a></h4>
+           <h5><a href="about.html">about</a></h5>
+           <h6><a href="assignments.html">assignments</a></h6>
+</header>
+
+    <section id="midterm">
+        <a href="projects/proposal/index.html">
+        <h2 class="overlay">MIDTERM
+          </h2>
+            </a>
+        </section>
+      
+   <section id="final">
+        <a href="projects/final/top/index.html">
+        <h2 class="overlay">FINAL
+          </h2>
+            </a>
+        </section>
+    
+</body>
+</html>
