@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css?family=Work+Sans|Yeseva+One');
+
+* {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+html, body {
+	height: 100%;
+}
+
+section {
+    width: 100%;
+    height: 100vh;
+	padding: 20px;
+	position:relative;
+}
+
+p {
+	font-family: 'Work Sans', sans-serif;
+	font-size: 16px;
+	line-height: 24px;
+	margin-bottom: 15px;
+    padding:5px;
+}
+
+#s1 {
+	height: 100vh;
+	background: url(../images/bg1.gif) no-repeat center center fixed;
+	background-size: cover;
+}
+
+#s1 article {
+    width:35%;
+    min-height: auto; 
+    background:#fff;
+    padding: 20px;
+    position:absolute;
+    bottom:40px;
+    left:40px;
+}
+
+#s2 {
+    height: 50vh;
+    background: fixed center center;
+    background-color: black;
+}
+
+#s2 article {
+	width:60%;
+    background:black;
+    margin-left: 20px;
+    margin-top: 2%; 
+    position:absolute;
+    left:40px;
+}
+
+#s2 h1 {
+	font-family: 'Yeseva+One', serif;
+	color: lightpink;
+	font-size: 6.5vmax;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+#s2 p {
+   color: white; 
+}
+
+#s3 {
+    height: 100vh;
+	background: url(../images/bg3.gif) no-repeat center center;
+	background-size: cover;
+}
+
+
+#s3 article {
+	width: 35%;
+	background: #fff;
+	padding:20px;
+	position: absolute;
+    text-align: left;
+    bottom:40px;
+    right:40px;
+}
+
+#s3 h1 {
+	font-family: 'Yeseva+One', serif;
+	font-size: 4vmax;
+    color: lightpink;
+    text-align: center;
+    margin-top:15px;
+    margin-bottom: 15px;
+}
+
+footer {
+    background-color: black;
+    color:lightpink;
+    font-family: 'Work+Sans', sans-serif;
+    font-size: 20px;
+    text-align: center;
+    padding: 20px;
+}
