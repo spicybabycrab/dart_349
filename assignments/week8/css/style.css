@@ -1,0 +1,97 @@
+/*=============== FONTS ===============*/
+
+@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro&display=swap');
+
+@font-face {
+    font-family: 'vtf_misterpixeltools';
+    src: url('../fonts/mister_pixel_tools-webfont.eot');
+    src: url('../fonts/mister_pixel_tools-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/mister_pixel_tools-webfont.woff2') format('woff2'),
+         url('../fonts/mister_pixel_tools-webfont.woff') format('woff'),
+         url('../fonts/mister_pixel_tools-webfont.ttf') format('truetype'),
+         url('../fonts/mister_pixel_tools-webfont.svg#vtf_misterpixeltools') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'vtf_misterpixelregular';
+    src: url('../fonts/mister_pixel_regular-webfont.eot');
+    src: url('../fonts/mister_pixel_regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/mister_pixel_regular-webfont.woff2') format('woff2'),
+         url('../fonts/mister_pixel_regular-webfont.woff') format('woff'),
+         url('../fonts/mister_pixel_regular-webfont.ttf') format('truetype'),
+         url('../fonts/mister_pixel_regular-webfont.svg#vtf_misterpixelregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+* { margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html, body {
+    font-family: 'Source Code Pro', monospace;
+    background: #000;
+    text-align: center;
+	height: 100%;
+    background-color: #000; 
+}
+
+/*=============== FIND ===============*/
+
+#clickIntro {
+    width:auto;
+    height: auto;
+    position: absolute;
+    margin: 100px auto;
+    left: 50%;
+    transform: translate(-50%);
+    z-index:0;
+}
+
+#clickIntro h1 {
+    font-size: 6vmax;
+    color: #fff;
+    font-family:'vtf_misterpixelregular';
+    text-shadow: 0 0 3px orange;
+    color: transparent;
+}
+
+#buttonBarrier{
+background-color: cadetblue;
+height: 100vh;
+width: 100%;
+padding: 40px;
+}
+
+#clickButton {
+  font-family: 'Source Code Pro', monospace;
+  display: inline-block;
+  text-decoration: none;
+  border: 0;
+  background: black;
+  color: #fff;
+  font-size: 2vmax;
+  padding: 10px 20px;
+  cursor: pointer;
+  margin: 10px;
+    opacity: 0;
+    z-index: 99;
+/* transition: all , 1s;*/
+}
+
+#clickButton:hover{
+    opacity:1;
+}
+
+/*=============== MOBILE ===============*/
+
+@media screen and (max-width: 55em) {
+
+#clickButton {
+opacity: 1;
+}
+}
