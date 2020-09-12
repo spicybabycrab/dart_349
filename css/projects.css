@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro|Work+Sans|ZCOOL+XiaoWei&display=swap');
+
+/* reset */
+* {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    /* border and padding won't increase width or height*/
+}
+
+html, body {
+	height: 100%;
+    cursor:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='50' height='60' viewport='0 0 100 100' style='fill:black;font-size:30px;'><text y='50%'>🌶️</text></svg>") 16 0,auto; 
+/* parent at 100% height makes children able to be 100%	height*/
+}
+
+/* unvisited link */
+a:link {
+  color: #fff;
+    font-family:'Source Sans Pro', sans-serif;
+    text-decoration: none; 
+    cursor:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='50' height='60' viewport='0 0 100 100' style='fill:black;font-size:30px;'><text y='50%'>🦀</text></svg>") 16 0,auto; 
+    transition:all 0.3s ease;
+}
+
+/* visited link */
+a:visited {
+  color: #fff;
+    font-family:'Source Sans Pro', sans-serif;
+    text-decoration: none;
+    cursor:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='50' height='60' viewport='0 0 100 100' style='fill:black;font-size:30px;'><text y='50%'>🦀</text></svg>") 16 0,auto; 
+    transition:all 0.3s ease;
+}
+
+/* mouse over link */
+a:hover {
+    font-family:'Source Sans Pro', sans-serif;
+    text-decoration: none;
+    color: transparent;
+    text-shadow: 0 0 6px white;
+    cursor:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='50' height='60' viewport='0 0 100 100' style='fill:black;font-size:30px;'><text y='50%'>🦀</text></svg>") 16 0,auto; 
+    transition:all 0.3s ease;
+}
+
+/* selected link */
+a:active {
+  color: yellow;
+    font-family:'Source Sans Pro', sans-serif;
+    text-decoration: none;
+    cursor:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='50' height='60' viewport='0 0 100 100' style='fill:black;font-size:30px;'><text y='50%'>🦀</text></svg>") 16 0,auto; 
+    transition:all 0.3s ease;
+}
+
+#face h3 {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 5vmax;
+    z-index: 100;
+}
+
+#face h4 {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 5vmax;
+    z-index: 100;
+}
+
+#face h5 {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  font-size: 5vmax;
+    z-index: 100;
+}
+
+#face h6 {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  font-size: 5vmax;
+    z-index: 100;
+}
+
+section {
+    position: relative;
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: all .3s;
+}
+
+section:hover {
+    filter: opacity(40%);
+    transition: all 0.3s ease-in-out;
+}
+
+.overlay {
+    position:absolute;
+    width: 100%;
+    height: 50%;
+}
+
+#midterm {
+    display: flex;
+    background: url(../images/akira1.gif) no-repeat center center;  
+    background-size: cover;
+}
+#midterm h2 {
+    position: relative;
+    padding: 30px;
+    font-family: 'ZCOOL XiaoWei', serif;
+    font-size:10vmax;
+    color: #fff;
+    font-weight: 500;
+    text-align: center;
+    justify-content: center;
+}
+#final {
+    display: flex;
+    background: url(../images/akira2.gif) no-repeat center center;
+    background-size: cover 
+}
+#final h2 {
+    position: relative;
+    padding: 30px;
+    font-family: 'ZCOOL XiaoWei', serif;
+    font-size: 10vmax;
+    color: #fff;
+    font-weight: 500;
+    text-align: center;
+    justify-content: center;
+}
