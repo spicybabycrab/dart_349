@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+ <title>credits</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body id = "body">
+
+<!--------NAVIGATION-------->
+
+<button class="hamburger" onclick="openNav()">☰</button>  
+
+<div id="mySidepanel" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+  <a href="../top/index.html"> 
+  ↑ <p>top</p></a> 
+  <a href="../appear/index.html"> 
+  • <p>appear</p></a>
+  <a href="../takedown/index.html"> 
+  • <p>take down</p></a>
+  <a href="../find/index.html"> 
+  • <p>find</p></a>
+  <a href="../mask/index.html"> 
+  • <p>mask</p></a>
+  <a href="../credits/index.html"> 
+  ↓ <p>credits</p></a> 
+</div>
+
+<!------CREDITS------>
+
+<section id="worksCited">
+<article>
+
+<h1>works cited</h1><br>
+
+<h2>CSS Glitch Effect</h2>
+<p>Codrops. 2017: https://github.com/codrops/CSSGlitchEffect/</p> 
+
+<h2>Whack a Mole</h2>
+<p>Kato, Katherine. 2019: https://codepen.io/kathykato/pen/bRLvWX</p> 
+
+<h2>Camera and Video Control with HTML5</h2>
+<p>Walsh, David. 2012: https://davidwalsh.name/browser-camera</p> 
+
+<h2>Image Comparison Slider</h2>
+<p>W3Schools: https://www.w3schools.com/howto/howto_js_image_comparison.asp</p> 
+         
+<h2>Bibliography</h2>
+          
+<p>
+Blas, Zach. “Facial Weaponization Suite.” <i>Zach Blas</i>, 2012, http://www.zachblas.info/works/facial-weaponization-suite/. (accessed October 21, 2019).
+</p>
+<p>
+Ca’Macana,“The Old Tradition of Disguise: A Brief History of Venetian Masks,” <i>Ca’Macana Venezia</i>, 15 October 2013, http://www.camacana.com/a-brief-history-of-venetian-masks/ (accessed October 21, 2019). 
+</p>
+<p>
+Monahan, Torin. “The Right to Hide? Anti-Surveillance Camouflage and the Aestheticization of Resistance.” <i>Communication and Critical/Cultural Studies</i>, vol. 12, no. 2, Feb. 2015, pp. 159–178., doi:10.1080/14791420.2015.1006646. Available from https://www.tandfonline.com/doi/pdf/10.1080/14791420.2015.1006646. (accessed October 21, 2019).
+</p>
+<p>
+Nail, Thomas. “The Politics of the Mask.” <i>HuffPost</i>, 23 Jan. 2014, https://www.huffpost.com/entry/the-politics-of-the-mask_b_4262001?view=screen. (accessed October 21, 2019).
+</p>
+<p>
+Ridler, Faith. “Hong Kong Activists Wear Joker and Winnie-the-Pooh Masks.” <i>Daily Mail</i>, 19 Oct. 2019, https://www.dailymail.co.uk/news/article-7590823/Hong-Kong-activists-wear-Joker-Winnie-Pooh-masks.html. (accessed October 21, 2019). 
+</p>
+<p>
+Selvaggio, Leo. “URME SURVEILLANCE: Indiegogo Campaign.” <i>Vimeo</i>, 2014, https://vimeo.com/90828804. (accessed October 21, 2019).
+</p>
+<p>
+Qiang, Xiao. “The Road to Digital Unfreedom: President Xi's Surveillance State.” <i>Journal of Democracy</i>, Jan 2019, https://www.journalofdemocracy.org/articles/the-road-to-digital-unfreedom-president-xis-surveillance-state/. (accessed November 21, 2019).
+</p>
+<p>
+“The Hong Kong Protests Explained in 100 and 500 Words.”<i>BBC News</i>, 28 Nov. 2019, https://www.bbc.com/news/world-asia-china-49317695. (accessed December 1, 2019).
+</p>
+
+</article>
+</section>
+
+<!-----NAVIGATION JS----->
+
+<script>
+function start() {document.getElementsById("");}
+    
+function openNav() {document.getElementById("mySidepanel").style.width = "160px";}
+
+function closeNav() {document.getElementById("mySidepanel").style.width = "0";}
+</script>
+
+<!--------POPUP JS-------->
+<script>
+    let index =1;
+   
+    window.onload = function(){
+    window.addEventListener("mousemove",clearScreen);
+   
+    setInterval(
+        function(){turnOn(index);index++;}
+      
+    ,10000)
+
+    function turnOn(index)
+    {
+        let cam = document.createElement("span");
+        cam.className = "popup";
+        cam.innerHTML = "<img src='images/camera.gif' alt=''/>";
+        
+       // var cam = document.getElementsByClassName("popup");
+         cam.style.opacity = 1;
+         cam.style.position = "absolute";
+        let randomLeft = Math.ceil(Math.random()*70);
+      
+        cam.style.left = randomLeft.toString()+"%";
+        
+         let randomTop = Math.ceil(Math.random()*70);
+     
+        cam.style.top = randomTop.toString()+"%";
+        document.getElementById("body").appendChild(cam);
+    }
+        
+     function clearScreen(){
+       
+         var cam = document.getElementsByClassName("popup");
+           console.log(cam.length);
+         var i; 
+			for (i = 0; i < cam.length; i++) {
+				cam[i].style.opacity = 0;
+			}
+     }  
+    }
+</script>
+
+</body>
+</html>
