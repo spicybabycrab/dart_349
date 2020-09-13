@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+ <title>top</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body id = "body">
+
+<!--------NAVIGATION-------->
+<button class="hamburger" onclick="openNav()">☰</button>  
+
+<div id="mySidepanel" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+  <a href="../top/index.html"> 
+  ↑ <p>top</p></a> 
+  <a href="../appear/index.html"> 
+  • <p>appear</p></a>
+  <a href="../takedown/index.html"> 
+  • <p>take down</p></a>
+  <a href="../find/index.html"> 
+  • <p>find</p></a>
+  <a href="../mask/index.html"> 
+  • <p>mask</p></a>
+  <a href="../credits/index.html"> 
+  ↓ <p>credits</p></a> 
+</div>
+
+<!------TOP------> 
+<video id="video" autoplay></video>
+<section id="topIntro">
+    <h1>Do you consent to being surveilled?</h1>
+    <button id="iGuess">I GUESS...</button>
+</section>
+
+<!------MOBILE CAMERA?------> 
+<input type="file" accept="image/*" capture="camera" />
+
+<!-----NAVIGATION JS----->
+<script>
+function start() {document.getElementsById("");}
+    
+function openNav() {document.getElementById("mySidepanel").style.width = "160px";}
+
+function closeNav() {document.getElementById("mySidepanel").style.width = "0";}
+</script>
+
+<!--------POPUP JS-------->
+<script>
+    let index =1;
+   
+    window.onload = function(){
+    window.addEventListener("mousemove",clearScreen);
+   
+    setInterval(
+        function(){turnOn(index);index++;}
+      
+    ,10000)
+
+    function turnOn(index)
+    {
+        let cam = document.createElement("span");
+        cam.className = "popup";
+        cam.innerHTML = "<img src='images/camera.gif' alt=''/>";
+        
+       // var cam = document.getElementsByClassName("popup");
+         cam.style.opacity = 1;
+         cam.style.position = "absolute";
+        let randomLeft = Math.ceil(Math.random()*70);
+      
+        cam.style.left = randomLeft.toString()+"%";
+        
+         let randomTop = Math.ceil(Math.random()*70);
+     
+        cam.style.top = randomTop.toString()+"%";
+        document.getElementById("body").appendChild(cam);
+    }
+        
+     function clearScreen(){
+       
+         var cam = document.getElementsByClassName("popup");
+           console.log(cam.length);
+         var i; 
+			for (i = 0; i < cam.length; i++) {
+				cam[i].style.opacity = 0;
+			}
+     }  
+    }
+</script>
+
+<!------TOP JS------> 
+<script>
+    document.getElementById("iGuess").addEventListener("click",function(event){
+    console.log("button clicked");
+    event.preventDefault();
+    var video = document.getElementById('video');
+    navigator.getUserMedia = navigator.getUserMedia ||
+                         navigator.webkitGetUserMedia ||
+                         navigator.mozGetUserMedia;
+
+    if(navigator.mediaDevices&& navigator.mediaDevices.getUserMedia) {
+    // Not adding `{ audio: true }` since we only want video now
+    navigator.mediaDevices.getUserMedia({ video: true })
+        .then(function(stream) {
+        //video.src = window.URL.createObjectURL(stream);
+        video.srcObject = stream;
+        video.play();
+        document.getElementById("topIntro").style.zIndex = 997;
+    });
+    }
+    });
+
+</script>
+
+</body>
+</html>
