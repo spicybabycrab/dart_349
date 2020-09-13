@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>find</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<body id = "body">
+
+<!--------NAVIGATION-------->
+
+<button class="hamburger" onclick="openNav()">☰</button>  
+
+<div id="mySidepanel" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+  <a href="../top/index.html"> 
+  ↑ <p>top</p></a> 
+  <a href="../appear/index.html"> 
+  • <p>appear</p></a>
+  <a href="../takedown/index.html"> 
+  • <p>take down</p></a>
+  <a href="../find/index.html"> 
+  • <p>find</p></a>
+  <a href="../mask/index.html"> 
+  • <p>mask</p></a>
+  <a href="../credits/index.html"> 
+  ↓ <p>credits</p></a> 
+</div>
+
+<!-----FIND----->
+
+<section id="clickIntro">
+    <h1>Find and Click</h1>
+</section>
+
+<div id="buttonBarrier">
+
+<button id="clickButton"type="button" onClick="fuckOff()">society has become the biggest panopticon</button>
+</div>  
+
+
+<!-----NAVIGATION JS----->
+
+<script>
+function start() {document.getElementsById("");}
+    
+function openNav() {document.getElementById("mySidepanel").style.width = "160px";}
+
+function closeNav() {document.getElementById("mySidepanel").style.width = "0";}
+</script>
+
+<!--------POPUP JS-------->
+
+<script>
+    let index =1;
+   
+    window.onload = function(){
+    window.addEventListener("mousemove",clearScreen);
+   
+    setInterval(
+        function(){turnOn(index);index++;}
+      
+    ,10000)
+
+    function turnOn(index)
+    {
+        let cam = document.createElement("span");
+        cam.className = "popup";
+        cam.innerHTML = "<img src='images/camera.gif' alt=''/>";
+        
+       // var cam = document.getElementsByClassName("popup");
+         cam.style.opacity = 1;
+         cam.style.position = "absolute";
+        let randomLeft = Math.ceil(Math.random()*70);
+      
+        cam.style.left = randomLeft.toString()+"%";
+        
+         let randomTop = Math.ceil(Math.random()*70);
+     
+        cam.style.top = randomTop.toString()+"%";
+        document.getElementById("body").appendChild(cam);
+    }
+        
+     function clearScreen(){
+       
+         var cam = document.getElementsByClassName("popup");
+           console.log(cam.length);
+         var i; 
+			for (i = 0; i < cam.length; i++) {
+				cam[i].style.opacity = 0;
+			}
+     }  
+    }
+</script>
+   
+<!-----FIND JS----->
+
+<script>
+//Make text disappear
+function fuckOff() {
+document.getElementById("clickIntro").style.display = "none";}
+</script>
+    
+<script>
+//this function will randomize phrases appearing on buttons
+let buttonWords = ["one country, two systems", "borrowed time in this borrowed city", "surveillance is here, and it’s here to stay", "we are watched and fundamentally changed. we perform rather than be", "a face is like being armed",
+"today, in our biometric age, existence has become a means of control", "becoming nonexistent turns your face into fog, and fog makes revolt possible", "masks act as an opaque tool of collective transformation", "think about data collection, facial recognition", "China is boasting that it has 600 million surveillance cameras with facial recognition capacities", "by 2020, the Chinese government aims to build a nationwide video surveillance network for ensuring public security which will be omnipresent, fully networked, working all the time, and fully controllable", "a revolution of our times"]
+
+let buttonVal;
+
+$(document).ready(function (){
+  console.log("sip");
+  $('#clickButton').on("click", hi);
+});
+
+function hi(){
+  console.log("hi");
+  chooseButtonText();
+}
+
+  function chooseButtonText() {
+    buttonVal = buttonWords[Math.floor(Math.random() * buttonWords.length)];
+    $("#clickButton").text(buttonVal);
+    console.log($("#clickButton").height());
+
+    positionButton();
+}
+
+  function positionButton(){
+   
+    buttonLeftMargin = Math.ceil(Math.random()*60);
+   buttonTopMargin = Math.ceil(Math.random()*60);
+      
+       $("#clickButton").css("margin-top", buttonTopMargin+"%");
+    $("#clickButton").css("margin-left", buttonLeftMargin+"%");
+}
+    
+</script>
+    
+</body>
+</html>
