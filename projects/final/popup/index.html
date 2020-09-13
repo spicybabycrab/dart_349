@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>popup</title>
+  <link rel="stylesheet" href="style.css">
+
+</head>
+<body id = "body">
+  
+<script>
+    let index =1;
+   
+    window.onload = function(){
+    window.addEventListener("mousemove",clearScreen);
+   
+    setInterval(
+        function(){turnOn(index);index++;}
+      
+    ,10000)
+
+    function turnOn(index)
+    {
+        let cam = document.createElement("span");
+        cam.className = "popup";
+        cam.innerHTML = "<img src='images/camera.gif' alt=''/>";
+        
+       // var cam = document.getElementsByClassName("popup");
+         cam.style.opacity = 1;
+         cam.style.position = "absolute";
+        let randomLeft = Math.ceil(Math.random()*70);
+      
+        cam.style.left = randomLeft.toString()+"%";
+        
+         let randomTop = Math.ceil(Math.random()*70);
+     
+        cam.style.top = randomTop.toString()+"%";
+        document.getElementById("body").appendChild(cam);
+    }
+        
+     function clearScreen(){
+       
+         var cam = document.getElementsByClassName("popup");
+           console.log(cam.length);
+         var i; 
+			for (i = 0; i < cam.length; i++) {
+				cam[i].style.opacity = 0;
+			}
+     }  
+    }
+</script>
+
+</body>
