@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+ <title>take down</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body id = "body">
+
+<!--------NAVIGATION-------->
+
+<button class="hamburger" onclick="openNav()">☰</button>  
+
+<div id="mySidepanel" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+  <a href="../top/index.html"> 
+  ↑ <p>top</p></a> 
+  <a href="../appear/index.html"> 
+  • <p>appear</p></a>
+  <a href="../takedown/index.html"> 
+  • <p>take down</p></a>
+  <a href="../find/index.html"> 
+  • <p>find</p></a>
+  <a href="../mask/index.html"> 
+  • <p>mask</p></a>
+  <a href="../credits/index.html"> 
+  ↓ <p>credits</p></a> 
+</div>
+
+<!------TAKE DOWN------>
+
+<div id="countdown"></div>
+<!--<h1>ABCDEFG</h1>-->
+<h2>Score: <span class="score">0</span></h2>
+<button id="start" onClick="startGame()">Start</button>
+
+<div class="game">
+  <div class="brick brick1">
+    <div class="camera"></div>
+  </div>
+  <div class="brick brick2">
+    <div class="camera"></div>
+  </div>
+  <div class="brick brick3">
+    <div class="camera"></div>
+  </div>
+  <div class="brick brick4">
+    <div class="camera"></div>
+  </div>
+  <div class="brick brick5">
+    <div class="camera"></div>
+  </div>
+  <div class="brick brick6">
+    <div class="camera"></div>
+  </div>
+</div>
+
+<!-----NAVIGATION JS----->
+
+<script>
+function start() {document.getElementsById("");}
+    
+function openNav() {document.getElementById("mySidepanel").style.width = "160px";}
+
+function closeNav() {document.getElementById("mySidepanel").style.width = "0";}
+</script>
+
+<!--------POPUP JS-------->
+<script>
+    let index =1;
+   
+    window.onload = function(){
+    window.addEventListener("mousemove",clearScreen);
+   
+    setInterval(
+        function(){turnOn(index);index++;}
+      
+    ,10000)
+
+    function turnOn(index)
+    {
+        let cam = document.createElement("span");
+        cam.className = "popup";
+        cam.innerHTML = "<img src='images/camera.gif' alt=''/>";
+        
+       // var cam = document.getElementsByClassName("popup");
+         cam.style.opacity = 1;
+         cam.style.position = "absolute";
+        let randomLeft = Math.ceil(Math.random()*70);
+      
+        cam.style.left = randomLeft.toString()+"%";
+        
+         let randomTop = Math.ceil(Math.random()*70);
+     
+        cam.style.top = randomTop.toString()+"%";
+        document.getElementById("body").appendChild(cam);
+    }
+        
+     function clearScreen(){
+       
+         var cam = document.getElementsByClassName("popup");
+           console.log(cam.length);
+         var i; 
+			for (i = 0; i < cam.length; i++) {
+				cam[i].style.opacity = 0;
+			}
+     }  
+    }
+</script>
+
+<!------TAKE DOWN JS------>
+
+<script  src="../takedown/javascript/script.js"></script>
+
+</body>
+</html>
